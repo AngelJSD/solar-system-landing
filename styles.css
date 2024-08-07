@@ -13,19 +13,55 @@ body {
   min-height: 100vh;
 }
 
-.header {
+.main-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem 2rem 4rem;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.main-header.scrolled {
+  background-color: black;
+}
+
+.main-header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.main-header__title {
+  font-size: 24px;
+  color: white;
+}
+
+.main-header__link {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+
+.presentation {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #fff;
   height: 100vh;
-  padding: 2rem;
+  padding: 8rem;
   overflow: hidden;
   background-color: #000;
 }
 
-.header::before, .header::after {
+.presentation::before, .presentation::after {
   content: '';
   position: absolute;
   top: 0;
@@ -70,7 +106,7 @@ body {
   animation: stars 60s linear infinite;
 }
 
-.header::after {
+.presentation::after {
   top: auto;
   bottom: 0;
   left: auto;
@@ -87,23 +123,23 @@ body {
   }
 }
 
-.header__content {
+.presentation__content {
   max-width: 50%;
   z-index: 2;
 }
 
-.header__title {
+.presentation__title {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-.header__subtitle {
+.presentation__subtitle {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   color: #ddd;
 }
 
-.header__cta {
+.presentation__cta {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   background-color: #ff9800;
@@ -113,20 +149,32 @@ body {
   font-size: 1rem;
 }
 
-.header__image-container {
-  max-width: 40%;
-  z-index: 2;
+.presentation__image-container {
+  border-radius: 50%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+  z-index: 1;
 }
 
-.header__image {
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
+.presentation__image {
+  background-image: url(https://www.solarsystemscope.com/textures/download/2k_sun.jpg);
+  animation: rotate-day 80s linear infinite;
+  background-size: 200%;
+  border-left: solid 1px black;
+  border-radius: 50%;
+  box-shadow: 5px 0 20px 10px #040615 inset; 
+  height: 500px;
+  position: absolute;
+  width: 500px;
+  z-index: 3;
 }
 
 .main-content {
   flex: 1;
-  padding: 2rem 1rem;
+  align-items: center;
+  padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -150,16 +198,49 @@ body {
   color: #aaa;
 }
 
+@keyframes slideInFromRight {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+}
+
 .planet {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 240px;
-  background-color: #222;
+  width: 70%;
+  height: 340px;
   padding: 1rem;
   border-radius: 0.5rem;
   position: relative;
+}
+
+.visible {
+  opacity: 1;
+  animation: slideInFromRight 1s forwards;
+}
+
+.invisible {
+  opacity: 0;
+  animation: slideOutToRight 1s forwards;
 }
 
 .planet__content {
@@ -186,21 +267,52 @@ body {
   z-index: 1;
 }
 
-.day {
+.planet__image {
   animation: rotate-day 80s linear infinite;
-  background-image: url(https://www.solarsystemscope.com/textures/download/2k_earth_daymap.jpg);
   background-size: 200%;
   border-left: solid 1px black;
   border-radius: 50%;
   box-shadow: 5px 0 20px 10px #040615 inset; 
   height: 250px;
-  margin-left: 55px;
+  margin-left: 25px;
   position: absolute;
   width: 250px;
   z-index: 3;
 }
 
-.inner-shadow {
+.planet__image--mercury {
+  background-image: url(https://www.solarsystemscope.com/textures/download/2k_mercury.jpg);
+}
+
+.planet__image--venus {
+  background-image: url(https://www.solarsystemscope.com/textures/download/2k_venus_atmosphere.jpg);
+}
+
+.planet__image--earth {
+  background-image: url(https://www.solarsystemscope.com/textures/download/2k_earth_daymap.jpg);
+}
+
+.planet__image--mars {
+  background-image: url(https://www.solarsystemscope.com/textures/download/2k_mars.jpg);
+}
+
+.planet__image--jupiter {
+  background-image: url(https://www.solarsystemscope.com/textures/download/2k_jupiter.jpg);
+}
+
+.planet__image--saturn {
+  background-image: url(https://www.solarsystemscope.com/textures/download/2k_saturn.jpg);
+}
+
+.planet__image--uranus {
+  background-image: url(https://www.solarsystemscope.com/textures/download/2k_uranus.jpg);
+}
+
+.planet__image--neptune {
+  background-image: url(https://www.solarsystemscope.com/textures/download/2k_neptune.jpg);
+}
+
+.planet--inner-shadow {
   background: transparent;
   border-radius: 50%;
   box-shadow: -5px 0 10px 1px #152b57 inset, 5px 0 10px 1px #040615 inset;
@@ -231,14 +343,11 @@ body {
   .planet {
       flex-direction: column;
       height: auto;
+      width: 100%;
   }
 
   .planet__content, .planet__image-container {
       max-width: 100%;
       margin-bottom: 1rem;
-  }
-
-  .planet--right .planet__content {
-      order: unset;
   }
 }

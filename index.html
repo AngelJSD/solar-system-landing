@@ -7,104 +7,109 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header__content">
-            <h1 class="header__title">Welcome to the Solar System</h1>
-            <p class="header__subtitle">A perfect place for alien life</p>
-            <a href="#summary" class="header__cta">Explore Now</a>
-        </div>
-        <div class="header__image-container">
-            <img src="https://via.placeholder.com/400x400" alt="Solar System" class="header__image">
-        </div>
+    <header class="main-header">
+      <div class="main-header__content">
+          <h1 class="main-header__title">The Solar System</h1>
+          <a href="https://github.com/AngelJSD/solar-system-landing" class="main-header__link">GitHub</a>
+      </div>
     </header>
-    <main class="main-content">
+    <main>
+      <section class="presentation">
+        <div class="presentation__content">
+            <h1 class="presentation__title">Welcome to the Solar System</h1>
+            <p class="presentation__subtitle">A perfect place for any type of alien life</p>
+        </div>
+        <div class="presentation__image-container">
+          <div class='presentation__image'></div>
+        </div>
+      </section>
+      <section class="main-content">
         <section class="summary" id="summary">
             <h2 class="summary__title">Discover the Wonders of Our Solar System</h2>
             <p class="summary__description">From the scorching surface of Mercury to the icy rings of Saturn, our Solar System offers a variety of environments that could be suitable for different types of alien life. Each planet has its unique characteristics that make it an interesting place to explore and possibly settle.</p>
         </section>
-        <section class="planet planet--left">
-          <div class="planet__image-container">
-            <div class='day'></div>
-            <div class='inner-shadow'></div>
-          </div>
-          <div class="planet__content">
-              <h2 class="planet__name">Planet 1</h2>
-              <p class="planet__description">Description of Planet 1. Ideal for life that thrives in warm, sunny environments.</p>
-          </div>
-      </section>
         <section class="planet planet--left" id="mercury">
             <div class="planet__image-container">
-                <img src="https://via.placeholder.com/240" alt="Mercury" class="planet__image">
+                <div class="planet__image planet__image--mercury"></div>
+                <div class="planet--inner-shadow"></div>
             </div>
             <div class="planet__content">
                 <h2 class="planet__name">Mercury</h2>
-                <p class="planet__description">A small, rocky planet with extreme temperatures.</p>
+                <p class="planet__description">Mercury's extreme temperatures and close proximity to the Sun make it an ideal home for heat-loving aliens. Imagine living on the edge of perpetual twilight, with stunning views of the Sun's corona.</p>
             </div>
         </section>
         <section class="planet planet--right" id="venus">
             <div class="planet__content">
                 <h2 class="planet__name">Venus</h2>
-                <p class="planet__description">A hot planet with a thick, toxic atmosphere.</p>
+                <p class="planet__description">Venus' thick, toxic atmosphere could be perfect for cloud-dwelling aliens. The planet's intense heat and pressure create a challenging yet fascinating environment for resilient species.</p>
             </div>
             <div class="planet__image-container">
-                <img src="https://via.placeholder.com/240" alt="Venus" class="planet__image">
+                <div class="planet__image planet__image--venus"></div>
+                <div class="planet--inner-shadow"></div>
             </div>
         </section>
         <section class="planet planet--left" id="earth">
             <div class="planet__image-container">
-                <img src="https://via.placeholder.com/240" alt="Earth" class="planet__image">
+                <div class="planet__image planet__image--earth"></div>
+                <div class="planet--inner-shadow"></div>
             </div>
             <div class="planet__content">
                 <h2 class="planet__name">Earth</h2>
-                <p class="planet__description">A diverse planet with abundant water and life.</p>
+                <p class="planet__description">Earth's diverse ecosystems and abundant water make it a paradise for a wide range of alien species. From lush forests to vast oceans, there's something for everyone on our blue planet.</p>
             </div>
         </section>
         <section class="planet planet--right" id="mars">
             <div class="planet__content">
                 <h2 class="planet__name">Mars</h2>
-                <p class="planet__description">A cold, desert planet with potential for life.</p>
+                <p class="planet__description">Mars, with its red deserts and potential for water beneath its surface, offers a perfect habitat for hardy, pioneering aliens. The thin atmosphere and lower gravity make it a fascinating frontier.</p>
             </div>
             <div class="planet__image-container">
-                <img src="https://via.placeholder.com/240" alt="Mars" class="planet__image">
+                <div class="planet__image planet__image--mars"></div>
+                <div class="planet--inner-shadow"></div>
             </div>
         </section>
         <section class="planet planet--left" id="jupiter">
             <div class="planet__image-container">
-                <img src="https://via.placeholder.com/240" alt="Jupiter" class="planet__image">
+                <div class="planet__image planet__image--jupiter"></div>
+                <div class="planet--inner-shadow"></div>
             </div>
             <div class="planet__content">
                 <h2 class="planet__name">Jupiter</h2>
-                <p class="planet__description">A gas giant with a turbulent atmosphere.</p>
+                <p class="planet__description">Jupiter's vast, turbulent atmosphere is a playground for gas-giant dwelling aliens. The planet's immense size and powerful storms create a dynamic and ever-changing environment.</p>
             </div>
         </section>
         <section class="planet planet--right" id="saturn">
             <div class="planet__content">
                 <h2 class="planet__name">Saturn</h2>
-                <p class="planet__description">A gas giant known for its stunning rings.</p>
+                <p class="planet__description">Saturn, known for its stunning rings, is ideal for alien species that thrive in low-gravity environments. The rings and numerous moons provide a spectacular view and endless exploration opportunities.</p>
             </div>
             <div class="planet__image-container">
-                <img src="https://via.placeholder.com/240" alt="Saturn" class="planet__image">
+                <div class="planet__image planet__image--saturn"></div>
+                <div class="planet--inner-shadow"></div>
             </div>
         </section>
         <section class="planet planet--left" id="uranus">
             <div class="planet__image-container">
-                <img src="https://via.placeholder.com/240" alt="Uranus" class="planet__image">
+                <div class="planet__image planet__image--uranus"></div>
+                <div class="planet--inner-shadow"></div>
             </div>
             <div class="planet__content">
                 <h2 class="planet__name">Uranus</h2>
-                <p class="planet__description">An ice giant with a unique tilt.</p>
+                <p class="planet__description">Uranus, with its unique tilt and icy atmosphere, offers a cold and mysterious environment. It's an excellent destination for aliens adapted to extreme cold and dark conditions.</p>
             </div>
         </section>
         <section class="planet planet--right" id="neptune">
             <div class="planet__content">
                 <h2 class="planet__name">Neptune</h2>
-                <p class="planet__description">A windy, ice giant with a deep blue color.</p>
+                <p class="planet__description">Neptune's deep blue color and windy atmosphere make it a captivating home for aquatic or wind-riding alien species. Its mysterious nature invites exploration and discovery.</p>
             </div>
             <div class="planet__image-container">
-                <img src="https://via.placeholder.com/240" alt="Neptune" class="planet__image">
+                <div class="planet__image planet__image--neptune"></div>
+                <div class="planet--inner-shadow"></div>
             </div>
         </section>
-    </main>
+      </section>
+  </main>
     <footer class="footer">
         <p class="footer__text">Explore the possibilities!</p>
     </footer>
