@@ -381,4 +381,12 @@ body {
       max-width: 100%;
       margin-bottom: 1rem;
   }
+
+  .main-header {
+    padding: 2rem;
+  }
+
+  .presentation {
+    padding: 2rem;
+  }
 }
