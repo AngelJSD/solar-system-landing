@@ -2,9 +2,10 @@
 
 # Welcome to The solar system!
 
-- [Link to the deployed site](https://main--fanciful-gecko-6ab83a.netlify.app/)
-
 This is simple landing page built only using HTML, CSS and JS as a demonstratrion for the NASA Space Apps Challenge Arequipa
+
+- [Link to the deployed site](https://main--fanciful-gecko-6ab83a.netlify.app/)
+- [Link to the Lighthouse report of the site](https://pagespeed.web.dev/analysis/https-main--fanciful-gecko-6ab83a-netlify-app/3qcvw6c5om?hl=en-US&form_factor=desktop)
 
 ## Concept & CTA
 
