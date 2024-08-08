@@ -379,8 +379,8 @@ body {
 }
 
 .location-info a {
-  color: #007bff;
   text-decoration: none;
+  color: #fff;
 }
 
 .location-info a:hover {
@@ -403,7 +403,6 @@ body {
 .cta__description {
   font-size: 1.25rem;
   margin-bottom: 1rem;
-  color: #aaa;
 }
 
 .cta__email {
@@ -423,7 +422,6 @@ body {
 
 .cta__location {
   font-size: 1.25rem;
-  color: #555;
 }
 
 .footer {
