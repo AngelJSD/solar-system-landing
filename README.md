@@ -1,4 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5b0e7165-70e1-4ec5-8fd0-03900f02ad93/deploy-status)](https://app.netlify.com/sites/fanciful-gecko-6ab83a/deploys)
+
 # Welcome to The solar system!
+
+- [Link to the deployed site](https://main--fanciful-gecko-6ab83a.netlify.app/)
 
 This is simple landing page built only using HTML, CSS and JS as a demonstratrion for the NASA Space Apps Challenge Arequipa
 
