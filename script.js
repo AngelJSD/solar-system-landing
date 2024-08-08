@@ -30,7 +30,6 @@ window.addEventListener('scroll', () => {
     const planets = document.querySelectorAll('.planet');
     planets.forEach(planet => {
         const rect = planet.getBoundingClientRect();
-        console.log(rect.top, window.innerHeight);
         if (rect.top < window.innerHeight && rect.bottom > 0) {
             planet.classList.remove('invisible');
             planet.classList.add('visible');
