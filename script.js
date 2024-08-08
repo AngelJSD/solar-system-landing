@@ -1,3 +1,20 @@
+// Loading image animation
+document.addEventListener('DOMContentLoaded', () => {
+    const planets = document.querySelectorAll('.planet__image');
+    // Image of the sun
+    const presentation = document.querySelectorAll('.presentation__image');
+
+    [...planets, ...presentation].forEach(planet => {
+        const bgUrl = getComputedStyle(planet).getPropertyValue('background-image').slice(5, -2);
+        const img = new Image();
+        img.src = bgUrl;
+        img.onload = () => {
+            planet.style.backgroundImage = `url(${bgUrl})`;
+            planet.classList.remove('placeholder');
+        };
+    });
+});
+
 // Scroll event listener for the header
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.main-header');
